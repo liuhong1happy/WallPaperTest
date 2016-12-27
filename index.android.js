@@ -21,6 +21,11 @@ export default class WallPaperTest extends Component {
     Alert.alert("提示","你当前要设置的图片路径为"+uri);
     WallPaperManager.setWallpaper({uri},function(res){
       console.log(res);
+      if(res.status){
+        Alert.alert("提示","设置壁纸成功");
+      }else{
+        Alert.alert("提示","设置壁纸失败");
+      }
     })
   }
   render() {
